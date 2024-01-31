@@ -72,6 +72,11 @@ public class plane : MonoBehaviour
                 
             }
         }
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPosition.y > Screen.height || screenPosition.y < 0)
+        {
+            Destroy(gameObject );
+        }
     }
     void OnMouseDown()
     {
@@ -93,5 +98,23 @@ public class plane : MonoBehaviour
             lineRenderer.SetPosition(lineRenderer.positionCount -1, newPosition);
             lastPosition = newPosition;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        spriteRenderer.color = Color.red;
+        
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        float dist = Vector3.Distance(currentPosition, collision.transform.position);
+        if (dist <= 1)
+        {
+            Debug.Log("Boom");
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        spriteRenderer.color = Color.white;
     }
 }
