@@ -18,6 +18,10 @@ public class plane : MonoBehaviour
     float ranRotation;
     public List<Sprite> sprite;
     SpriteRenderer spriteRenderer;
+    bool isCollide = false;
+    public Vector2 runway;
+    PolygonCollider2D polycol;
+    public float score = 0;
 
     void Start()
     {
@@ -34,6 +38,7 @@ public class plane : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, ranRotation);
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite[Random.Range(0, sprite.Count)];
+        polycol = GetComponent<PolygonCollider2D>();
     }
     void FixedUpdate()
     {
@@ -48,13 +53,21 @@ public class plane : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if (polycol.OverlapPoint(runway))
         {
-            landingTimer += 0.05f * Time.deltaTime;
+            isCollide = true;
+        }
+        if(isCollide == true)
+        {
+            landingTimer += 0.5f * Time.deltaTime;
             float interpolation = landing.Evaluate(landingTimer);
+            score++;
+            Debug.Log("score is" + score);
             if(transform.localScale.z < 0.1f)
             {
                 Destroy(gameObject);
+                score++;
+                Debug.Log("score is" + score);
             }
             transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, interpolation);
         }
