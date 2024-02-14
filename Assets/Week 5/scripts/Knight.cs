@@ -14,7 +14,6 @@ public class Knight : MonoBehaviour
     public float maxhealth = 5;
     public float health;
     bool isDead = false;
-    //public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
