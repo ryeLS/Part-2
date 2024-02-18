@@ -3,7 +3,8 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//ASSETS- magic orb - https://opengameart.org/content/particle-effects
+// BIRD AND BACKGROUND BY ME
 public class bird : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -45,6 +46,10 @@ public class bird : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
         }
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 }
