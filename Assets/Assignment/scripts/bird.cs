@@ -12,11 +12,9 @@ public class bird : MonoBehaviour
     Vector2 movement;
     public float speed = 3;
     Animator animator;
-    public AnimationCurve curve;
-    public Transform Startpos;
-    public Transform Endpos;
-    public float lerptimer;
-    public float interpolation;
+    public Transform player;
+    public GameObject magicPrefab;
+
     
     void Start()
     {
@@ -50,6 +48,7 @@ public class bird : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             animator.SetTrigger("Attack");
+            Instantiate(magicPrefab, player.position, player.rotation);
         }
     }
 }
