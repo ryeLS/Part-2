@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 public class lerp : MonoBehaviour
 {
     public AnimationCurve curve;
-    public Transform Bird;
+    public Transform startPos;
     public Transform endPos;
     public float lerptimer;
     public float interpolation;
@@ -22,7 +22,7 @@ public class lerp : MonoBehaviour
     void Update()
     {
         interpolation = curve.Evaluate(lerptimer);
-        transform.position = Vector3.Lerp(Bird.position, endPos.position, interpolation);
+        transform.position = Vector3.Lerp(startPos.position, endPos.position, interpolation);
         lerptimer = lerptimer + Time.deltaTime;
 
     }
