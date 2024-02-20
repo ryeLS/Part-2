@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//https://kicked-in-teeth.itch.io/button-ui
+
 //SCRIPT FOR GOING BACK TO START SCREEN
 public class UNLOAD : MonoBehaviour
 {

@@ -4,7 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //ASSETS- magic orb - https://opengameart.org/content/particle-effects
-// BIRD AND BACKGROUND BY ME
+//dragon sprites - https://opengameart.org/content/flying-dragon-rework
+//health bar and border - https://opengameart.org/content/simple-health-bars
+//purple buttons - https://kicked-in-teeth.itch.io/button-ui
+// BIRD AND TILESMAP BY ME
 public class bird : MonoBehaviour
     //PLAYER MOVEMENT AND ANIMATIONS
 {

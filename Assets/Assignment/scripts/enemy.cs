@@ -28,8 +28,12 @@ public class enemy : MonoBehaviour
         health -= damage;
         health = Mathf.Clamp(health, 0, maxhealth);
         if(health <= 0)
-        {
+        {//dead animation
             animator.SetTrigger("Wasted");
+        }
+        else
+        {//take damage animation
+            animator.SetTrigger("Hurt");
         }
     }
 }
