@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class magic : MonoBehaviour
+    //SCRIPT FOR MAGIC PROPERTIES; CLICK RIGHT MOUSE
 {
     public float speed = 200f;
     public GameObject ball;

@@ -6,16 +6,10 @@ using UnityEngine;
 using System.Security.Cryptography;
 
 public class enemy : MonoBehaviour
-{
+{//DECREASES DRAGON HEALTH IF DAMAGE TAKEN AND SHOWS DEATH CLIP
     public float maxhealth = 10f;
     public float health;
     Animator animator;
-    public Color colourA; //british spelling is better
-    public Color colourB;
-    public SpriteRenderer sr;
-    public float interpol;
-    public float timelerp = 1f;
-    public AnimationCurve curve;
     // Start is called before the first frame update
     void Start()
     {

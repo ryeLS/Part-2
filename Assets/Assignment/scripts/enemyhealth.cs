@@ -6,7 +6,7 @@ using UnityEngine;
 //https://opengameart.org/content/flying-dragon-rework
 //https://opengameart.org/content/simple-health-bars
 public class enemyhealth : MonoBehaviour
-{
+{//ENEMY HEALTH. MOVES SLIDER BASED ON HEALTH
     public float health;
     public float currentHealth;
     public Slider slider;

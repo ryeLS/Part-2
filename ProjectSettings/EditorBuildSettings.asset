@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Week 5/scene/Week5-Task1.unity
     guid: affcae14a6053a94a99a5c7842f521c2
+  - enabled: 1
+    path: Assets/Assignment/scenes/title.unity
+    guid: 1fc2b44070cea1a4aacab6b1b78235ea
+  - enabled: 1
+    path: Assets/Assignment/scenes/game-assignment.unity
+    guid: 7cc3c66e6706e7649ac1378ad735bb87
   m_configObjects: {}

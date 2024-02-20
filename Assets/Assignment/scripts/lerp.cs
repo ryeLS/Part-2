@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Security.Cryptography;
 
 public class lerp : MonoBehaviour
+    //LERP FOR MOVING DRAGON ONTO SCREEN
 {
     public AnimationCurve curve;
     public Transform startPos;

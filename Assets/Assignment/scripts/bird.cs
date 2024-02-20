@@ -6,6 +6,7 @@ using UnityEngine;
 //ASSETS- magic orb - https://opengameart.org/content/particle-effects
 // BIRD AND BACKGROUND BY ME
 public class bird : MonoBehaviour
+    //PLAYER MOVEMENT AND ANIMATIONS
 {
     Rigidbody2D rb;
     Vector2 destination;
@@ -22,7 +23,7 @@ public class bird : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     private void FixedUpdate()
-    {
+    {//MOVE
         movement = destination - (Vector2)transform.position;
 
         if (movement.magnitude < 0.1)
@@ -36,17 +37,17 @@ public class bird : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);//LEFT CLICK MOVES CHARACTER TO MOUSE POS
         }
         if(movement.x != 0 || movement.y != 0)
-        {
+        {//VALUES FOR ANIMATION CLIPS TO MOVE PROPERLY
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
         }
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
         if (Input.GetMouseButtonDown(1))
-        {
+        {//CLIP FOR ATTACKING
             animator.SetTrigger("Attack");
             Instantiate(magicPrefab, player.position, player.rotation);
         }
