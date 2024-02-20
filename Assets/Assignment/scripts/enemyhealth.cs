@@ -15,10 +15,10 @@ public class enemyhealth : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void LoseHealth(float damage)
     {
-        
+
+        slider.value -= damage;
+
     }
 }
