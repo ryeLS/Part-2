@@ -36,13 +36,6 @@ public class enemy : MonoBehaviour
         if(health <= 0)
         {
             animator.SetTrigger("Wasted");
-            timelerp = timelerp + Time.deltaTime;
-            interpol = curve.Evaluate(timelerp);
-            sr.color = Color.Lerp(sr.color, colourB, interpol);
         }
-        //else
-        //{
-
-        //}
     }
 }
