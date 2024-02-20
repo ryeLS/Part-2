@@ -28,7 +28,7 @@ public class magic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.SendMessage("TakeDamage", 1, SendMessageOptions.DontRequireReceiver);
+        collision.gameObject.SendMessage("LoseHealth", 1, SendMessageOptions.DontRequireReceiver);
         Destroy(gameObject);
     }
 }

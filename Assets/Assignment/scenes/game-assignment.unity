@@ -741,6 +741,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1411231008}
   - component: {fileID: 1411231007}
+  - component: {fileID: 1411231011}
+  - component: {fileID: 1411231010}
   - component: {fileID: 1411231006}
   - component: {fileID: 1411231005}
   - component: {fileID: 1411231009}
@@ -918,6 +920,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1411231010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411231004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c45f517074c6c4fbab4026583bb484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  currentHealth: 0
+  slider: {fileID: 1434895216}
+--- !u!114 &1411231011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411231004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c312afcf0ad890b408dab22e4c3d0970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 5
+  health: 0
 --- !u!1 &1434895214
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,7 +960,7 @@ GameObject:
   - component: {fileID: 1434895215}
   - component: {fileID: 1434895216}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1001,9 +1032,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
