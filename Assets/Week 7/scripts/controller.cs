@@ -14,7 +14,7 @@ public class controller : MonoBehaviour
     float charge;
     public float MaxCharge;
     public float prevScore;
-    Vector2 direction;
+    public static Vector2 direction;
     public static bawlplayer CurrentSelection { get; private set; }
     public static void SetCurrentSelection(bawlplayer player)
     {
