@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class goal : MonoBehaviour
 {
-    private float score = 0;
     public Transform Kicker;
     Rigidbody2D rb;
     // Start is called before the first frame update
